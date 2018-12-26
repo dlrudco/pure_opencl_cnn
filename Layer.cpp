@@ -3,6 +3,8 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <string.h>
+
 using namespace std;
 #define CL_DEBUG
 //#define TEST

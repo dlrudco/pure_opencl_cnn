@@ -4,7 +4,7 @@
 #include <vector>
 #include <memory>
 //#include <opencv\highgui.h>
-#include <CL\cl.h>
+#include <CL/cl.h>
 #include <fstream>
 
 using namespace std;

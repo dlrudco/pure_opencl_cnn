@@ -1,16 +1,17 @@
 #define __CL_ENABLE_EXCEPTIONS
 
-#include "layer.h"
+#include "Layer.h"
 
 //#include <opencv\highgui.h>
 //#include<opencv2/core/core.hpp>
 //#include<opencv2/highgui/highgui.hpp>
-#include <CL\cl.hpp>
+#include <CL/cl.hpp>
 
 #include <iostream>
 #include <fstream>
 #include <ctime>
 #include <vector>
+#include <string.h>
 
 using namespace std;
 //using namespace cv;
@@ -137,7 +138,7 @@ int main(int argc, char** argv)
 	  outCLayer->activate(cLayer2->getFeature());
 	  stop = clock();
 
-	  durationTime = ((double)(stop - start)) / CLK_TCK;
+	  durationTime = ((double)(stop - start)) / CLOCKS_PER_SEC;
 	 // cout << "µ¥´ÎºÄÊ±£º" << durationTime << " s" << endl;
 	  totaltime += durationTime;
 	  clEnqueueReadBuffer(cqCommandQueue, outCLayer->getFeature(), CL_TRUE, 0, sizeof(float) * 10, output, 0, NULL, NULL);
