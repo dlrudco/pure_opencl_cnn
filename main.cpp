@@ -2,7 +2,7 @@
 
 #include "Layer.h"
 
-//#include <opencv\highgui.h>
+//#include <opencv/highgui.h>
 //#include<opencv2/core/core.hpp>
 //#include<opencv2/highgui/highgui.hpp>
 #include <CL/cl.hpp>
@@ -48,7 +48,7 @@ int main(int argc, char** argv)
 /*	std::ofstream fout("mnist.txt");
 	if (!fout)
 	{
-		std::cout << "文件不能打开" << std::endl;
+		std::cout << "NO such File" << std::endl;
 	}
 	else
 	{
@@ -139,7 +139,7 @@ int main(int argc, char** argv)
 	  stop = clock();
 
 	  durationTime = ((double)(stop - start)) / CLOCKS_PER_SEC;
-	 // cout << "单次耗时：" << durationTime << " s" << endl;
+	 // cout << "Duartion " << durationTime << " s" << endl;
 	  totaltime += durationTime;
 	  clEnqueueReadBuffer(cqCommandQueue, outCLayer->getFeature(), CL_TRUE, 0, sizeof(float) * 10, output, 0, NULL, NULL);
 	  /*for (size_t w = 0; w != 10; w++) {
@@ -154,9 +154,9 @@ int main(int argc, char** argv)
 	  }
 	    
   }
-  cout << "程序耗时：" << totaltime << " s" << endl;
-  cout << "平均每次耗时：" << totaltime/ total << " s" << endl;
-  cout << "准确率:" << float(flag) / total << endl;
+  cout << "Total time" << totaltime << " s" << endl;
+  cout << "Average Processing Time per Image" << totaltime/ total << " s" << endl;
+  cout << "Accuracy :" << float(flag) / total << endl;
   /*
   char* x = new char[32];
   
