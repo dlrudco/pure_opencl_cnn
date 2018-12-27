@@ -103,7 +103,7 @@ int openclInit()
 	//得到平台ID
 	openclRetTackle(clGetPlatformIDs(1, &cpPlatform, NULL), "clGetPlatFormIDs");
 	//得到GPU设备ID
-	openclRetTackle(clGetDeviceIDs(cpPlatform, CL_DEVICE_TYPE_CPU, 1, &cdDevice, NULL), "clGetDeviceIDs");
+	openclRetTackle(clGetDeviceIDs(cpPlatform, CL_DEVICE_TYPE_ALL, 1, &cdDevice, NULL), "clGetDeviceIDs");
 	//获取GPU设备上下文
 	cxGPUContext = clCreateContext(0, 1, &cdDevice, NULL, NULL, &ret);
 
